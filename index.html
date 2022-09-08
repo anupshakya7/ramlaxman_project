@@ -30,7 +30,7 @@
 
 <body>
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark">
+    <!-- <div class="container-fluid bg-dark">
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center text-white">
@@ -60,13 +60,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Topbar End -->
 
 
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar fixed-top navbar-expand-lg bg-white shadow-sm navbar-light py-lg-1 px-lg-5">
+        <nav class="navbar fixed-top navbar-expand-lg bg-white shadow navbar-light py-lg-1 px-lg-5">
             <a href="index.html" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-uppercase" style="color: #09110e;"><img src="./img/logo.png" width="60" height="70"
                         alt="logo">
@@ -81,6 +81,7 @@
                     <a href="#aboutUs" class="nav-item nav-link">About</a>
                     <a href="#team" class="nav-item nav-link">Our Team</a>
                     <a href="#services" class="nav-item nav-link">Services</a>
+                    <a href="#customer" class="nav-item nav-link">Our Customer</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="" class="btn btn-primary rounded-pill py-2 px-4 d-none d-lg-block">Join Us</a>
@@ -102,19 +103,34 @@
                 strengthen your community while advancing the world economy.</h4>
 
             <div class="mx-auto mb-5" style="width: 100%; max-width: 600px; display: inline;">
-                <button class="btn btn-light mx-auto rounded-pill py-2 px-4 " data-bs-toggle="modal"
-                    data-src="https://www.youtube.com/embed/fXdlrWuQVW8" data-bs-target="#videoModal"><i
-                        class="fa fa-film"></i>
+
+                <button type="button" class="btn btn-light mx-auto rounded-pill py-2 px-4 video-btn"
+                    data-bs-toggle="modal" data-src="https://www.youtube.com/embed/fXdlrWuQVW8"
+                    data-bs-target="#myModal">
+                    <i class="fa fa-film"></i>
                     Watch
-                    Video</button>
-                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    Video
+                </button>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                    <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
 
+
                             <div class="modal-body">
-                                <button type="button" class="btn-danger rounded btn-close mb-2" style="float: right;"
-                                    data-bs-dismiss="modal" aria-label="Close">x</button>
+
+                                <!-- 16:9 aspect ratio -->
+                                <div class="ratio">
+                                    <iframe class="embed-responsive-item w-100 " style="height: 550px;" src=""
+                                        id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal"
+                                    aria-label="Close">Close</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -386,7 +402,7 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
@@ -401,7 +417,7 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
@@ -416,7 +432,7 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
@@ -431,7 +447,7 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
@@ -446,7 +462,7 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
@@ -461,13 +477,55 @@
                         </div>
                     </div>
                     <div class="w-100 bg-white text-center p-4">
-                        <a class="btn btn-primary" href="detail.html">Service Detail</a>
+                        <a class="btn btn-primary" href="details.html">Service Detail</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Services End -->
+
+    <!-- Customer Start -->
+    <section id="customer" class="container-fluid py-5">
+        <div class="py-5">
+            <div class="section-title text-center position-relative mb-5">
+                <h6 class="d-inline-block position-relative text-secondary text-uppercase pb-2">Our Customer</h6>
+                <h1 class="display-4">Explore Our Customers</h1>
+            </div>
+            <div class="owl-carousel customer-carousel position-relative" style="padding: 0 30px;">
+                <div class="customer-item card">
+                    <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                    <div class="bg-white text-center p-4">
+                        <h5 class="mb-3">Customer Name</h5>
+                        <p class="mb-2">Project Name</p>
+                    </div>
+                </div>
+                <div class="customer-item card">
+                    <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                    <div class="bg-white text-center p-4">
+                        <h5 class="mb-3">Customer Name</h5>
+                        <p class="mb-2">Project Name</p>
+                    </div>
+                </div>
+                <div class="customer-item card">
+                    <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                    <div class="bg-white text-center p-4">
+                        <h5 class="mb-3">Customer Name</h5>
+                        <p class="mb-2">Project Name</p>
+                    </div>
+                </div>
+                <div class="customer-item card ">
+                    <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                    <div class="bg-white text-center p-4">
+                        <h5 class="mb-3">Customer Name</h5>
+                        <p class="mb-2">Project Name</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Team End -->
 
 
     <!-- Contact Start -->
@@ -651,6 +709,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Gets the video src from the data-src on each button
+            var $videoSrc;
+            $('.video-btn').click(function () {
+                $videoSrc = $(this).data("src");
+            });
+            console.log($videoSrc);
+            // when the modal is opened autoplay it  
+            $('#myModal').on('shown.bs.modal', function (e) {
+                // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+                $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+            })
+            // stop playing the youtube video when I close the modal
+            $('#myModal').on('hide.bs.modal', function (e) {
+                // a poor man's stop video
+                $("#video").attr('src', $videoSrc);
+            })
+            // document ready  
+        });
+    </script>
 </body>
 
 </html>
